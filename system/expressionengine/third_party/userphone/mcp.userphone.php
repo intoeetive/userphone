@@ -38,7 +38,14 @@ class Userphone_mcp {
         // Make a local reference to the ExpressionEngine super object 
         $this->EE =& get_instance(); 
         
-        $this->EE->cp->set_variable('cp_page_title', lang('userphone_module_name'));
+        if (version_compare(APP_VER, '2.6.0', '>='))
+        {
+        	$this->EE->view->cp_page_title = lang('userphone_module_name');
+        }
+        else
+        {
+        	$this->EE->cp->set_variable('cp_page_title', lang('userphone_module_name'));
+        }
     } 
     
     

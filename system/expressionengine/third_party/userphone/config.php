@@ -3,7 +3,7 @@
 if ( ! defined('USERPHONE_ADDON_NAME'))
 {
 	define('USERPHONE_ADDON_NAME',         'UserPhone');
-	define('USERPHONE_ADDON_VERSION',      '0.1.0');
+	define('USERPHONE_ADDON_VERSION',      '0.1.2');
 }
 
 $config['name']=USERPHONE_ADDON_NAME;

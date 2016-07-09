@@ -87,9 +87,9 @@
 			
 			$req = $this->_twilio->request($url, 'POST', $data);
 
-			if (isset($req->sid))
+			if ($req->IsError==false)
 			{
-				return $req->sid;
+				return $req->ResponseXml->SMSMessage->Sid;
 			}
 			else
 			{
